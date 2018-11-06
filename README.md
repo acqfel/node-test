@@ -1,8 +1,6 @@
-## Welcome to GitHub Pages
+## Welcome to Useful Code Snippets - Typescript 
 
-You can use the [editor on GitHub](https://github.com/acqfel/node-test/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+[Jekyll](https://jekyllrb.com/)
 
 ### Markdown
 
@@ -35,3 +33,69 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
+## Snippets
+
+```typescript
+
+// Variable
+
+let x: string;
+
+// Array
+
+let list: number[] = [1, 2, 3];
+
+let list2: Array<number> = [1, 2, 3];
+
+// Enum
+
+enum Color {Red = 1, Green, Blue}
+let colorName: string = Color[2];
+
+alert(colorName);
+
+// Any
+
+let notSure: any = 4;
+notSure = "maybe a string instead";
+notSure = false; // okay, definitely a boolean
+
+let list3: any[] = [1, true, "free"];
+
+// Void
+
+function warnUser(): void {
+    alert("This is my warning message");
+}
+
+/* Assertions */
+
+//Type assertions have two forms. One is the "angle-bracket" syntax < >:
+
+let someValue: any = "this is a string";
+
+let strLength: number = (<string>someValue).length;
+
+//And the other is the as-syntax:
+let strLength2: number = (someValue as string).length;
+
+/* Interfaces */
+
+interface LabelledValue {
+    label: string;
+}
+
+// Optional Properties
+interface SquareConfig {
+    color?: string;
+    width?: number;
+}
+
+// Readonly properties
+interface Point {
+    readonly x: number;
+    readonly y: number;
+}
+
+```
