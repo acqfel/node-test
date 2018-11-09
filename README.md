@@ -1,6 +1,6 @@
 ## Welcome to Useful Code Snippets - Typescript
 
-## Snippets
+## Variables and Types
 
 ```typescript
 
@@ -34,20 +34,25 @@ let list3: any[] = [1, true, "free"];
 function warnUser(): void {
     alert("This is my warning message");
 }
+```
 
-/* Assertions */
+## Assertions
 
-//Type assertions have two forms. One is the "angle-bracket" syntax < >:
+Type assertions have two forms. One is the "angle-bracket" syntax < >:
 
+```typescript
 let someValue: any = "this is a string";
 
 let strLength: number = (<string>someValue).length;
+```
 
-//And the other is the as-syntax:
+The other is the as-syntax:
+```typescript
 let strLength2: number = (someValue as string).length;
+```
 
-/* Interfaces */
-
+## Interfaces
+```typescript
 interface LabelledValue {
     label: string;
 }
@@ -63,9 +68,7 @@ interface Point {
     readonly x: number;
     readonly y: number;
 }
-
 ```
-[Jekyll](https://jekyllrb.com/)
 
 ### Markdown
 
