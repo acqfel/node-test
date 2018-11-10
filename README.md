@@ -70,6 +70,69 @@ interface Point {
 }
 ```
 
+## Function Types
+```typescript
+interface Search {
+    (source: string, subString: string): boolean;
+}
+
+let mySearch: Search;
+mySearch = function(src: string, sub: string): boolean {
+    let result = src.search(sub);
+    return result > -1;
+}
+```
+## Classes
+
+### Simple Class
+```typescript
+class Speaker {
+    speech: string;
+    constructor(message: string) {
+        this.speech = message;
+    }
+    speaking() {
+        return "Hello, " + this.speech;
+    }
+}
+
+let speaker = new Speaker("world");
+```
+### Private and Protected
+```typescript
+class Person {
+    protected name: string;
+    protected constructor(name: string) { this.name = name; }
+}
+
+class Employee extends Person {
+    private department: string;
+
+    constructor(name: string, department: string) {
+        super(name);
+        this.department = department;
+    }
+
+    public presentation() {
+        return `Hello, my name is ${this.name} and I work in ${this.department}.`;
+    }
+}
+let james = new Employee("James", "Sales");
+```
+
+### Readonly Modifier
+```typescript
+class Animal {
+    readonly name: string;
+    readonly numberOfLegs: number = 4;
+    constructor (theName: string) {
+        this.name = theName;
+    }
+}
+let lion = new Animal("Lion");
+```
+
+
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
