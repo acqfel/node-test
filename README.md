@@ -14,6 +14,10 @@ let list: number[] = [1, 2, 3];
 
 let list2: Array<number> = [1, 2, 3];
 
+let list3: (boolean | number)[] = [true, false, 10];
+
+let arr2d: boolean[][] = [ [false, false] ];
+
 // Enum
 
 enum Color {Red = 1, Green, Blue}
@@ -46,6 +50,17 @@ if (typeof car === Car){
 if (car instanceof Car){
     console.log("Type Car - OK");
 }
+
+// enum
+enum Color {Red, Green, Blue}
+let c: Color = Color;
+{...}
+0: "Red"
+1: "Green"
+2: "Blue"
+Blue: 2
+Green: 1
+Red: 0
 ```
 
 ## Assertions
