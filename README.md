@@ -34,6 +34,18 @@ let list3: any[] = [1, true, "free"];
 function warnUser(): void {
     alert("This is my warning message");
 }
+
+// Checking Types
+import { Car } from './car.model';
+
+const car = new Car(blue);
+if (typeof car === Car){
+    console.log("Type Car - OK");
+}
+
+if (car instanceof Car){
+    console.log("Type Car - OK");
+}
 ```
 
 ## Assertions
